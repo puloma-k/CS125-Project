@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>386267628146-dlrh0m2mfrnk0gbnvsh3jbsvimlfo6lm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.386267628146-dlrh0m2mfrnk0gbnvsh3jbsvimlfo6lm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCz6Z1Y0UA2yLyfKA_PFNJ9Mj3rbGQXt3U</string>
+	<key>GCM_SENDER_ID</key>
+	<string>386267628146</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>CS125.MeMind</string>
+	<key>PROJECT_ID</key>
+	<string>memind-c2101</string>
+	<key>STORAGE_BUCKET</key>
+	<string>memind-c2101.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:386267628146:ios:a9311d9b0d59a55542b8eb</string>
+</dict>
+</plist>

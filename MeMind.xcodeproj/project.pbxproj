@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		6679143329A577B100188FF4 /* MeMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679143229A577B100188FF4 /* MeMindApp.swift */; };
-		6679143529A577B100188FF4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679143429A577B100188FF4 /* ContentView.swift */; };
 		6679143729A577B200188FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6679143629A577B200188FF4 /* Assets.xcassets */; };
 		6679143A29A577B200188FF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6679143929A577B200188FF4 /* Preview Assets.xcassets */; };
 		6679144429A577B200188FF4 /* MeMindTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679144329A577B200188FF4 /* MeMindTests.swift */; };
 		6679144E29A577B200188FF4 /* MeMindUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679144D29A577B200188FF4 /* MeMindUITests.swift */; };
 		6679145029A577B200188FF4 /* MeMindUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679144F29A577B200188FF4 /* MeMindUITestsLaunchTests.swift */; };
+		6679146129A5B62100188FF4 /* RecommendedActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146029A5B62100188FF4 /* RecommendedActivitiesView.swift */; };
+		6679146329A5B7C600188FF4 /* MoodTrackerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146229A5B7C600188FF4 /* MoodTrackerView.swift */; };
+		6679146529A5B7D200188FF4 /* MindfulnessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146429A5B7D200188FF4 /* MindfulnessView.swift */; };
+		6679146729A5B7DD00188FF4 /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146629A5B7DD00188FF4 /* UserProfileView.swift */; };
+		6679146929A5B9E100188FF4 /* RecommendedActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146829A5B9E100188FF4 /* RecommendedActivityView.swift */; };
+		6679146B29A5C25B00188FF4 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146A29A5C25B00188FF4 /* HomeView.swift */; };
+		6679146F29A83BCE00188FF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679146E29A83BCE00188FF4 /* AppDelegate.swift */; };
+		6679147229A83E1200188FF4 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 6679147129A83E1200188FF4 /* FirebaseAnalytics */; };
+		6679147429A83E1200188FF4 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 6679147329A83E1200188FF4 /* FirebaseAuth */; };
+		6679147629A83E1200188FF4 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 6679147529A83E1200188FF4 /* FirebaseDatabase */; };
+		6679147829A83E1200188FF4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 6679147729A83E1200188FF4 /* FirebaseStorage */; };
+		6679147E29A84EE900188FF4 /* StartScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679147D29A84EE900188FF4 /* StartScreenView.swift */; };
+		6679148229A8582000188FF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6679148129A8582000188FF4 /* GoogleService-Info.plist */; };
+		6679148429A9B4BE00188FF4 /* InitQuestionnaireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679148329A9B4BE00188FF4 /* InitQuestionnaireView.swift */; };
+		6679148729A9BC8800188FF4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 6679148629A9BC8800188FF4 /* FirebaseFirestore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +50,6 @@
 /* Begin PBXFileReference section */
 		6679142F29A577B100188FF4 /* MeMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6679143229A577B100188FF4 /* MeMindApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMindApp.swift; sourceTree = "<group>"; };
-		6679143429A577B100188FF4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		6679143629A577B200188FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6679143929A577B200188FF4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		6679143F29A577B200188FF4 /* MeMindTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeMindTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +57,16 @@
 		6679144929A577B200188FF4 /* MeMindUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MeMindUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6679144D29A577B200188FF4 /* MeMindUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMindUITests.swift; sourceTree = "<group>"; };
 		6679144F29A577B200188FF4 /* MeMindUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeMindUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6679146029A5B62100188FF4 /* RecommendedActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedActivitiesView.swift; sourceTree = "<group>"; };
+		6679146229A5B7C600188FF4 /* MoodTrackerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodTrackerView.swift; sourceTree = "<group>"; };
+		6679146429A5B7D200188FF4 /* MindfulnessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindfulnessView.swift; sourceTree = "<group>"; };
+		6679146629A5B7DD00188FF4 /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		6679146829A5B9E100188FF4 /* RecommendedActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedActivityView.swift; sourceTree = "<group>"; };
+		6679146A29A5C25B00188FF4 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		6679146E29A83BCE00188FF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6679147D29A84EE900188FF4 /* StartScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenView.swift; sourceTree = "<group>"; };
+		6679148129A8582000188FF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6679148329A9B4BE00188FF4 /* InitQuestionnaireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitQuestionnaireView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +74,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6679147629A83E1200188FF4 /* FirebaseDatabase in Frameworks */,
+				6679147829A83E1200188FF4 /* FirebaseStorage in Frameworks */,
+				6679147229A83E1200188FF4 /* FirebaseAnalytics in Frameworks */,
+				6679148729A9BC8800188FF4 /* FirebaseFirestore in Frameworks */,
+				6679147429A83E1200188FF4 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +106,7 @@
 				6679144229A577B200188FF4 /* MeMindTests */,
 				6679144C29A577B200188FF4 /* MeMindUITests */,
 				6679143029A577B100188FF4 /* Products */,
+				6679148529A9BC8800188FF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,10 +123,19 @@
 		6679143129A577B100188FF4 /* MeMind */ = {
 			isa = PBXGroup;
 			children = (
+				6679148129A8582000188FF4 /* GoogleService-Info.plist */,
 				6679143229A577B100188FF4 /* MeMindApp.swift */,
-				6679143429A577B100188FF4 /* ContentView.swift */,
 				6679143629A577B200188FF4 /* Assets.xcassets */,
 				6679143829A577B200188FF4 /* Preview Content */,
+				6679146029A5B62100188FF4 /* RecommendedActivitiesView.swift */,
+				6679146229A5B7C600188FF4 /* MoodTrackerView.swift */,
+				6679146429A5B7D200188FF4 /* MindfulnessView.swift */,
+				6679146629A5B7DD00188FF4 /* UserProfileView.swift */,
+				6679146829A5B9E100188FF4 /* RecommendedActivityView.swift */,
+				6679146A29A5C25B00188FF4 /* HomeView.swift */,
+				6679146E29A83BCE00188FF4 /* AppDelegate.swift */,
+				6679147D29A84EE900188FF4 /* StartScreenView.swift */,
+				6679148329A9B4BE00188FF4 /* InitQuestionnaireView.swift */,
 			);
 			path = MeMind;
 			sourceTree = "<group>";
@@ -127,6 +165,13 @@
 			path = MeMindUITests;
 			sourceTree = "<group>";
 		};
+		6679148529A9BC8800188FF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +188,13 @@
 			dependencies = (
 			);
 			name = MeMind;
+			packageProductDependencies = (
+				6679147129A83E1200188FF4 /* FirebaseAnalytics */,
+				6679147329A83E1200188FF4 /* FirebaseAuth */,
+				6679147529A83E1200188FF4 /* FirebaseDatabase */,
+				6679147729A83E1200188FF4 /* FirebaseStorage */,
+				6679148629A9BC8800188FF4 /* FirebaseFirestore */,
+			);
 			productName = MeMind;
 			productReference = 6679142F29A577B100188FF4 /* MeMind.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +267,9 @@
 				Base,
 			);
 			mainGroup = 6679142629A577B100188FF4;
+			packageReferences = (
+				6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 6679143029A577B100188FF4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -233,6 +288,7 @@
 			files = (
 				6679143A29A577B200188FF4 /* Preview Assets.xcassets in Resources */,
 				6679143729A577B200188FF4 /* Assets.xcassets in Resources */,
+				6679148229A8582000188FF4 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,8 +313,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6679143529A577B100188FF4 /* ContentView.swift in Sources */,
+				6679148429A9B4BE00188FF4 /* InitQuestionnaireView.swift in Sources */,
+				6679146729A5B7DD00188FF4 /* UserProfileView.swift in Sources */,
+				6679146B29A5C25B00188FF4 /* HomeView.swift in Sources */,
+				6679146329A5B7C600188FF4 /* MoodTrackerView.swift in Sources */,
+				6679147E29A84EE900188FF4 /* StartScreenView.swift in Sources */,
+				6679146F29A83BCE00188FF4 /* AppDelegate.swift in Sources */,
 				6679143329A577B100188FF4 /* MeMindApp.swift in Sources */,
+				6679146129A5B62100188FF4 /* RecommendedActivitiesView.swift in Sources */,
+				6679146529A5B7D200188FF4 /* MindfulnessView.swift in Sources */,
+				6679146929A5B9E100188FF4 /* RecommendedActivityView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,11 +483,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MeMind/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,11 +513,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MeMind/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MeMind/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -577,6 +645,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6679147129A83E1200188FF4 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		6679147329A83E1200188FF4 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		6679147529A83E1200188FF4 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		6679147729A83E1200188FF4 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		6679148629A9BC8800188FF4 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6679147029A83E1200188FF4 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6679142729A577B100188FF4 /* Project object */;
 }

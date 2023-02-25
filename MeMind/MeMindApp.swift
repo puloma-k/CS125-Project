@@ -7,11 +7,10 @@
 
 import SwiftUI
 
-@main
 struct MeMindApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RecommendedActivitiesView()
         }
     }
 }
