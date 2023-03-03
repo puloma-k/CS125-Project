@@ -9,7 +9,10 @@ import SwiftUI
 
 struct UserProfileView: View {
     var body: some View {
-        Text("this is user profile view")
+        ZStack {
+            Color("MainBackground").ignoresSafeArea()
+            Text("this is user profile view")
+        }
     }
 }
 

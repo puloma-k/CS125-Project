@@ -4,5 +4,10 @@
 <dict>
 	<key>FirebaseAppDelegateProxyEnabled</key>
 	<false/>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Alegreya-VariableFont_wght.ttf</string>
+		<string>Montserrat-VariableFont_wght.ttf</string>
+	</array>
 </dict>
 </plist>

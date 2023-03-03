@@ -11,6 +11,8 @@ struct RecommendedActivitiesView: View {
     
     var body: some View {
         VStack{
+            Text("Recommendations")
+                .font(Font.custom("AlegreyaRoman-Medium", size: 35))
             ForEach((1...3), id: \.self) {_ in
                 RecommendedActivityView()
                     .padding(10)

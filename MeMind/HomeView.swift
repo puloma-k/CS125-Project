@@ -17,6 +17,10 @@ struct HomeView: View {
         case activities
     }
     
+    init() {
+        UITabBar.appearance().backgroundColor = UIColor(named: "MainBackground")
+    }
+    
     var body: some View {
         TabView(selection: $selection) {
             RecommendedActivitiesView()
@@ -27,19 +31,19 @@ struct HomeView: View {
 
             MoodTrackerView()
                 .tabItem {
-                    Label("Mood Tracker", systemImage: "list.bullet")
+                    Label("Mood Tracker", systemImage: "square.and.pencil")
                 }
                 .tag(Tab.moodTracker)
             
-            MindfulnessView()
-                .tabItem {
-                    Label("Mindfulness", systemImage: "list.bullet")
-                }
-                .tag(Tab.mindfulness)
+//            MindfulnessView()
+//                .tabItem {
+//                    Label("Mindfulness", systemImage: "list.bullet")
+//                }
+//                .tag(Tab.mindfulness)
             
             UserProfileView()
                 .tabItem {
-                    Label("User Profile", systemImage: "list.bullet")
+                    Label("Profile", systemImage: "person")
                 }
                 .tag(Tab.userProfile)
         }

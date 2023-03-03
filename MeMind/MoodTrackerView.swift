@@ -9,7 +9,16 @@ import SwiftUI
 
 struct MoodTrackerView: View {
     var body: some View {
-        Text("this is mood tracker view")
+        Text(getDate())
+            .font(Font.custom("AlegreyaRoman-Medium", size: 30))
+        
+    }
+    
+    func getDate() -> String {
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "EEEE, MMMM d, yyyy"
+        return df.string(from: date)
     }
 }
 
