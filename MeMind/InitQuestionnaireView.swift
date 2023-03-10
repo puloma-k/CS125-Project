@@ -92,7 +92,7 @@ struct InitQuestionnaireView: View {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let uid : String = (Auth.auth().currentUser?.uid)!
-        ref.child("users/\(uid)/name").updateChildValues(["first name": firstName, "last name": lastName])
+        ref.child("users/\(uid)/name").updateChildValues(["firstname": firstName, "lastname": lastName])
         ref.child("users/\(uid)").updateChildValues(["age": age])
         self.nextPg = true
     }

@@ -10,11 +10,20 @@ import Firebase
 import FirebaseAuth
 
 struct MoodTrackerView: View {
-    @State var submitError = false
+    @State var noMoodError = false
+    @State var duplicateEntryError = false
+    @State var submitSuccess = false
     @State var curMood = ""
     @State var userReflection = ""
     @State var moods = ["Excited", "Happy", "Content", "Neutral", "Sad", "Stressed"]
-    @State var curDate = ""
+    @State var curDate: String
+    
+    init() {
+        let date = Date()
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-MM-dd"
+        curDate = df.string(from: date)
+    }
     
     var body: some View {
         ZStack {
@@ -76,7 +85,15 @@ struct MoodTrackerView: View {
                         }
                         .alert(
                             "Please select a mood.",
-                            isPresented: $submitError
+                            isPresented: $noMoodError
+                        ) {}
+                        .alert(
+                            "Mood already logged for today.",
+                            isPresented: $duplicateEntryError
+                        ) {}
+                        .alert(
+                            "Successfully logged today's mood!",
+                            isPresented: $submitSuccess
                         ) {}
                     }
                 }
@@ -89,22 +106,24 @@ struct MoodTrackerView: View {
 
     func submitMoodLog() {
         if(self.curMood == "") {
-            self.submitError = true
+            self.noMoodError = true
         }
-//        var ref: DatabaseReference!
-//        ref = Database.database().reference()
-//        let uid : String = (Auth.auth().currentUser?.uid)!
-//        ref.child("users/\(uid)/moodLogs/\(curDate)").updateChildValues(["mood": curMood, "reflection": userReflection])
-        
-        
-        // if entry for this date already exists, give error saying mood for today has already been entered
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
+        let uid : String = (Auth.auth().currentUser?.uid)!
+        ref.child("users/\(uid)/moodLogs").observeSingleEvent(of: .value, with: { snapshot in
+            if(snapshot.hasChild("\(curDate)")) {
+                self.duplicateEntryError = true
+            } else {
+                ref.child("users/\(uid)/moodLogs/\(curDate)").updateChildValues(["mood": curMood, "reflection": userReflection])
+                self.submitSuccess = true
+            }
+        })
     }
     
     func getDate() -> String {
         let date = Date()
         let df = DateFormatter()
-        df.dateFormat = "yyyy-MM-dd"
-        curDate = df.string(from: date)
         df.dateFormat = "EEEE, MMMM d, yyyy"
         return df.string(from: date)
     }

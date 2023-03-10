@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		589C243BD4361A9F711C7764 /* Pods_MeMind_MeMindUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE99834AB31D52270BA944F3 /* Pods_MeMind_MeMindUITests.framework */; };
+		660FC6E429BAD0FF005B3944 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660FC6E329BAD0FF005B3944 /* LocationManager.swift */; };
 		667315FB29AA0FE800E050CC /* Alegreya-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 667315FA29AA0FE800E050CC /* Alegreya-VariableFont_wght.ttf */; };
 		667315FD29AA184000E050CC /* Montserrat-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 667315FC29AA184000E050CC /* Montserrat-VariableFont_wght.ttf */; };
 		6679143329A577B100188FF4 /* MeMindApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6679143229A577B100188FF4 /* MeMindApp.swift */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		0298E73259D6374CD3CC018C /* Pods_MeMind.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MeMind.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		660FC6E329BAD0FF005B3944 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		667315FA29AA0FE800E050CC /* Alegreya-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alegreya-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		667315FC29AA184000E050CC /* Montserrat-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		6679142F29A577B100188FF4 /* MeMind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeMind.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -160,6 +162,7 @@
 				6679148329A9B4BE00188FF4 /* InitQuestionnaireView.swift */,
 				66FB7E8B29B1841B00298B23 /* InitQuestionnaire2View.swift */,
 				66FB7E8D29B1CB9F00298B23 /* InitQuestionnaire3View.swift */,
+				660FC6E329BAD0FF005B3944 /* LocationManager.swift */,
 			);
 			path = MeMind;
 			sourceTree = "<group>";
@@ -417,6 +420,7 @@
 				6679147E29A84EE900188FF4 /* StartScreenView.swift in Sources */,
 				6679146F29A83BCE00188FF4 /* AppDelegate.swift in Sources */,
 				6679143329A577B100188FF4 /* MeMindApp.swift in Sources */,
+				660FC6E429BAD0FF005B3944 /* LocationManager.swift in Sources */,
 				6679146129A5B62100188FF4 /* RecommendedActivitiesView.swift in Sources */,
 				6679146929A5B9E100188FF4 /* RecommendedActivityView.swift in Sources */,
 				66FB7E8C29B1841B00298B23 /* InitQuestionnaire2View.swift in Sources */,
@@ -581,6 +585,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeMind/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MeMind needs access to your location for personalizing recommendations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -611,6 +616,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MeMind/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "MeMind needs access to your location for personalizing recommendations";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
