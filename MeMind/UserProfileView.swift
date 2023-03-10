@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseAuth
 
 struct UserProfileView: View {
     var body: some View {
         ZStack {
-            Color("MainBackground").ignoresSafeArea()
-            Text("this is user profile view")
+            VStack {
+                Color("MainBackground").ignoresSafeArea()
+                
+            }
+            VStack {
+                Text("this is user profile view")
+            }
         }
     }
 }

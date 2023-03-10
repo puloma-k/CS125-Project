@@ -12,7 +12,6 @@ struct HomeView: View {
 
     enum Tab {
         case moodTracker
-        case mindfulness
         case userProfile
         case activities
     }
@@ -34,12 +33,6 @@ struct HomeView: View {
                     Label("Mood Tracker", systemImage: "square.and.pencil")
                 }
                 .tag(Tab.moodTracker)
-            
-//            MindfulnessView()
-//                .tabItem {
-//                    Label("Mindfulness", systemImage: "list.bullet")
-//                }
-//                .tag(Tab.mindfulness)
             
             UserProfileView()
                 .tabItem {

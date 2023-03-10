@@ -8,8 +8,6 @@
 import SwiftUI
 import Firebase
 import FirebaseAuth
-import FirebaseCore
-import FirebaseFirestore
 
 struct NavQuestionnaireView: View {
     @State var nextPg = false
@@ -94,7 +92,8 @@ struct InitQuestionnaireView: View {
         var ref: DatabaseReference!
         ref = Database.database().reference()
         let uid : String = (Auth.auth().currentUser?.uid)!
-        ref.child("users").child(uid).child("name").updateChildValues(["first name": firstName, "last name": lastName, "age": age])
+        ref.child("users/\(uid)/name").updateChildValues(["first name": firstName, "last name": lastName])
+        ref.child("users/\(uid)").updateChildValues(["age": age])
         self.nextPg = true
     }
 }

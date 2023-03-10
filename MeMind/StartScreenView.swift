@@ -49,6 +49,7 @@ struct StartScreenView: View {
                 }
                 TextField("Email", text: $email)
                     .textFieldStyle(.roundedBorder)
+                    .disableAutocorrection(true)
                     .autocapitalization(.none)
                 SecureField("Password", text: $password)
                     .textFieldStyle(.roundedBorder)
