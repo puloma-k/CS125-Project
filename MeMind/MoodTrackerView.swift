@@ -17,6 +17,7 @@ struct MoodTrackerView: View {
     @State var userReflection = ""
     @State var moods = ["Excited", "Happy", "Content", "Neutral", "Sad", "Stressed"]
     @State var curDate: String
+    @EnvironmentObject var moodLogged: Logged
     
     init() {
         let date = Date()
@@ -99,7 +100,6 @@ struct MoodTrackerView: View {
                 }
                 .padding()
                 .background(Color("MainBackground"))
-
             }
         }
     }
@@ -117,6 +117,7 @@ struct MoodTrackerView: View {
             } else {
                 ref.child("users/\(uid)/moodLogs/\(curDate)").updateChildValues(["mood": curMood, "reflection": userReflection])
                 self.submitSuccess = true
+                moodLogged.isLogged = true
             }
         })
     }

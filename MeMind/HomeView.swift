@@ -9,8 +9,13 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
+class Logged: ObservableObject {
+    @Published var isLogged: Bool = false
+}
+
 struct HomeView: View {
     @StateObject var locationManager = LocationManager()
+    @StateObject var moodLogged = Logged()
     @State private var selection: Tab = .activities
 
     enum Tab {
@@ -46,6 +51,7 @@ struct HomeView: View {
         .onAppear {
             getLocation()
         }
+        .environmentObject(moodLogged)
     }
     
     func getLocation() {

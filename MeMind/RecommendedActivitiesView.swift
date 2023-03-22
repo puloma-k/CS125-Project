@@ -9,26 +9,55 @@ import SwiftUI
 import Firebase
 import FirebaseAuth
 
+struct RecData: Identifiable {
+    var id: Int
+    var title: String
+    var url: String
+    var thumbnail: String
+    var recommended: Bool
+}
+
 struct RecommendedActivitiesView: View {
-    @State var userEmail = ""
-    @State var userName = ""
+    @EnvironmentObject var moodLogged: Logged
+    @State var recs = [RecData]()
     
     var body: some View {
-        VStack{
-            Text("\(userEmail)")
-                .font(Font.custom("AlegreyaRoman-Medium", size: 35))
-            ForEach((1...3), id: \.self) {_ in
-                RecommendedActivityView()
-                    .padding(10)
+        ZStack {
+            VStack {
+                Text("Recommended for you")
+                    .font(Font.custom("AlegreyaRoman-Medium", size: 35))
+                if !moodLogged.isLogged {
+                    VStack {
+                        Text("You haven't logged your mood today!")
+                            .font(Font.custom("MontserratRoman-Medium", size: 20))
+                            .multilineTextAlignment(.center)
+                        Spacer().frame(height: 10)
+                        Text("Go to the mood tracker tab to enter your mood")
+                            .font(Font.custom("MontserratRoman-Medium", size: 15))
+                    }
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color("MainBackground"))
+                }
+                Spacer().frame(height: 10)
+                  
+                ScrollView(.vertical) {
+                    VStack {
+                        ForEach(recs) { rec in
+                            RecommendedActivityView(title: rec.title, url: rec.url, thumbnail: rec.thumbnail)
+                            Spacer().frame(height: 15)
+                        }
+                    }
+                    .padding()
+                }
             }
         }
         .onAppear{
             getUserRecommendations()
         }
-        
     }
     
-    func getUserRecommendations() {
+    func getUserRecommendations(){
         // Prepare URL
         let url = URL(string: "http://node-express-env.eba-mxjk9php.us-west-1.elasticbeanstalk.com/activities")
         guard let requestUrl = url else { fatalError() }
@@ -47,24 +76,37 @@ struct RecommendedActivitiesView: View {
         // Perform HTTP Request
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
                 
-                // Check for Error
-                if let error = error {
-                    print("Error took place \(error)")
-                    return
+            // Check for Error
+            if let error = error {
+                print("Error took place \(error)")
+                return
+            }
+            
+            // Convert HTTP Response Data to a String
+            if let data = data, let dataString = String(data: data, encoding: .utf8) {
+//                print("Response data string:\n \(dataString)")
+                do {
+                    if let jsonArray = try JSONSerialization.jsonObject(with: data, options : .allowFragments) as? [Dictionary<String,Any>]
+                    {
+                        
+                        for (i, val) in jsonArray.enumerated() {
+                            recs.append(RecData(id: i, title: val["title"] as! String, url: val["url"] as! String, thumbnail: val["thumbnail"] as! String, recommended: val["recommended"] as! Bool))
+                        }
+                    } else {
+                        print("bad json")
+                    }
+                } catch let error as NSError {
+                    print(error)
                 }
-         
-                // Convert HTTP Response Data to a String
-                if let data = data, let dataString = String(data: data, encoding: .utf8) {
-                    print("Response data string:\n \(dataString)")
-                }
+            }
         }
         task.resume()
     }
     
 }
 
-struct RecommendedActivitiesView_Previews: PreviewProvider {
-    static var previews: some View {
-        RecommendedActivitiesView()
-    }
-}
+//struct RecommendedActivitiesView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        RecommendedActivitiesView()
+//    }
+//}
